@@ -12,9 +12,9 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "ubuntu/focal64"
-  config.vm.hostname = "dftd"
-
+#   config.vm.box = "ubuntu/focal64"
+  config.vm.box = "ubuntu/bionic64"
+  config.vm.hostname = "hamidadesokan"
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
   # `vagrant box outdated`. This is not recommended.
@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
   #
   config.vm.provider "virtualbox" do |vb|
     vb.memory = "1024"
-    vb.name = "dftd"
+    vb.name = "hamidadesokan"
     vb.customize ["modifyvm", :id, "--uart1", "0x3F8", "4"]
     vb.customize ["modifyvm", :id, "--uartmode1", "file", File::NULL]
   end
